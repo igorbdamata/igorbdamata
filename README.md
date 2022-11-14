@@ -3,6 +3,8 @@
 
 - 🌱 I’m currently learning **Assembly**
 
+- 👨‍💻 All of my projects are available at [https://sites.google.com/view/igorbdamata](https://sites.google.com/view/igorbdamata)
+
 - 💬 Ask me about **Clean code, game development...**
 
 - 📫 How to reach me **igorbdamata@gmail.com**
@@ -12,6 +14,7 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://discord.gg/#9584" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="#9584" height="30" width="40" /></a>
+<a href="https://mail.google.com/" target="blank"><img align="center" src="https://logodownload.org/wp-content/uploads/2018/03/gmail-logo-2-1.png" alt="#9584" height="30" width="40" /></a>
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
