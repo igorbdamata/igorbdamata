@@ -7,14 +7,14 @@
 
 - 💬 Ask me about: **Clean code, game development...**
 
-- 📫 How to reach me: **igorbdamata@gmail.com**
-
 <br> 
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://discordapp.com/users/Igor#9584" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="#9584" height="30" width="40" /></a>
-<a href="https://mail.google.com/" target="blank"><img align="center" src="https://logodownload.org/wp-content/uploads/2018/03/gmail-logo-4-1.png" alt="#9584" height="30" width="40" /></a>
+<a href="discordapp.com/users/Igor#9584" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="#9584" height="30" width="40" /></a> 
+- Igor#9584
+<br> 
+<a href="https://mail.google.com/" target="blank"><img align="center" src="https://logodownload.org/wp-content/uploads/2018/03/gmail-logo-4-1.png" alt="#9584" height="30" width="40" /></a> - igorbdamata@gmail.com
 </p>
 
 <br> 
