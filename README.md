@@ -33,16 +33,18 @@
 <a 
 href="https://store.steampowered.com/app/1799060/Control_Headlights/" target="_blank" rel="noreferrer">
 <img align="middle" 
-src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/ControlHeadlights.png" 
+src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/ControlHeadlights.png"  alt=""
  width="420" height="420">
            
 </a>
+
 <br>
 <br>
+
 <a 
 href="https://ludos-aurum.itch.io/kingdom-domination" target="_blank" rel="noreferrer">
 <img align="middle" 
-    src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/KingdomDomination.jpg" 
+    src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/KingdomDomination.jpg" alt=""
          width="420" height="420">
 </a>
 
