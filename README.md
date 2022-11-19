@@ -45,6 +45,7 @@ href="https://ludos-aurum.itch.io/kingdom-domination" target="_blank" rel="noref
     src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/KingdomDomination.jpg" 
          width="420" height="420">
 </a>
+
 <br>
 <br>
 
@@ -54,7 +55,6 @@ href="https://ludos-aurum.itch.io/beetle-infestation" target="_blank" rel="noref
     src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/BeetleInfestation.png" 
         alt=""  width="420" height="420">
 </a>
-</form>
 <br>    
 <br>
 
