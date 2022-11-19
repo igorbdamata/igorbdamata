@@ -28,7 +28,7 @@
 
 <br>
 
-<h3 align="center">My main works</h3>
+<h3 align="left">My main works</h3>
 
 <a 
 href="https://store.steampowered.com/app/1799060/Control_Headlights/" target="_blank" rel="noreferrer">
