@@ -30,17 +30,13 @@
 
 <h3 align="center">My main works</h3>
 
-    <a 
-    href="https://store.steampowered.com/app/1799060/Control_Headlights/" target="_blank" rel="noreferrer">
-    <img align="middle" 
-        src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/ControlHeadlights.png" 
-            width="420" height="420">
+<a 
+href="https://store.steampowered.com/app/1799060/Control_Headlights/" target="_blank" rel="noreferrer">
+<img align="middle" 
+src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/ControlHeadlights.png" 
+ width="420" height="420">
            
 </a>
-<br>
-<form action="https://store.steampowered.com/app/1799060/Control_Headlights/">
-    <input type="submit" value="Control Headlights!" />
-</form>
 <br>
 <br>
 <a 
@@ -50,10 +46,6 @@ href="https://ludos-aurum.itch.io/kingdom-domination" target="_blank" rel="noref
          width="420" height="420">
 </a>
 <br>
-<form action="https://ludos-aurum.itch.io/kingdom-domination">
-    <input type="submit" value="Kingdom Domination" />
-</form>
-<br>
 <br>
 
 <a 
@@ -62,9 +54,6 @@ href="https://ludos-aurum.itch.io/beetle-infestation" target="_blank" rel="noref
     src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/BeetleInfestation.png" 
         alt=""  width="420" height="420">
 </a>
-<br>
-<form action="https://ludos-aurum.itch.io/beetle-infestation">
-    <input type="submit" value="Beetle Infestation" />
 </form>
 <br>    
 <br>
@@ -75,9 +64,5 @@ href="https://igorbdamata.itch.io/prompt-mine-camp" target="_blank" rel="norefer
 src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/PromptMineFieldLogo.jpg" 
     alt=""  width="420" height="420">
 </a>
-<br>
-<form action="https://igorbdamata.itch.io/prompt-mine-camp">
-    <input type="submit" value="Prompt Mine Field" />
-</form>
 <br>
 <br>
