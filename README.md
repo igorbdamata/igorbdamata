@@ -1,7 +1,7 @@
 <h1 align="center">Hello 👋, I am Igor B. da Mata</h1>
 <h3 align="center">A passionate game programmer</h3>
 
-- 🌱 Learning: **Assembly**
+- 🌱 Learning: **JavaScript**
 
 - 👨‍💻 Portfolio: [https://sites.google.com/view/igorbdamata](https://sites.google.com/view/igorbdamata)
 
