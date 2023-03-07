@@ -6,20 +6,39 @@ class Tree {
         this.branchesLength = branchesLength;
         this.branchDecrementFactor = branchDecrementFactor;
         this.color = color;
+        this.branches = [];
+
+        angleMode(DEGREES);
+        this.#setBranch(this.position, 90, this.branchSize, 0)
+    }
+    #setBranch(startPosition, angle, size, count) {
+        if (count > this.branchesLength)
+            return;
+
+        let endPosition = createVector(startPosition.x - cos(angle) * size, startPosition.y - sin(angle) * size)
+        this.branches.push(new Branch(startPosition, endPosition, this.color));
+
+        this.#setBranch(endPosition, angle + this.branchAngle, size / this.branchDecrementFactor, count + 1)
+        this.#setBranch(endPosition, angle - this.branchAngle, size / this.branchDecrementFactor, count + 1)
     }
 
     draw() {
-        angleMode(DEGREES);
-        this.#drawBranch(this.position, 90, this.branchSize,0)
+        for (let i = 0; i < this.branches.length; i++) {
+            this.branches[i].draw();
+        }
     }
-    #drawBranch(position, angle, size, count) {
-        if (count >this.branchesLength)
-            return;
+}
+
+class Branch {
+    constructor(startPosition, endPosition, color) {
+        this.startPosition = startPosition;
+        this.endPosition = endPosition;
+        this.color = color;
+    }
+
+    draw() {
         strokeWeight(5);
         stroke(this.color);
-        let endPosition = createVector( position.x - cos(angle) * size, position.y - sin(angle) * size)
-        line(position.x, position.y, endPosition.x, endPosition.y);
-        this.#drawBranch(endPosition, angle + this.branchAngle, size / this.branchDecrementFactor,count+1)
-        this.#drawBranch(endPosition, angle - this.branchAngle, size / this.branchDecrementFactor,count+1)
+        line(this.startPosition.x, this.startPosition.y, this.endPosition.x, this.endPosition.y);
     }
 }
