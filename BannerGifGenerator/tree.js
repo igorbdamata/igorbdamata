@@ -3,7 +3,7 @@ class Tree {
         this.position = position;
         this.branchAngle = branchAngle;
         this.branchSize = branchSize;
-        this.branchesLength = branchesLength;
+        this.maxBranchesGeneration = branchesLength;
         this.branchDecrementFactor = branchDecrementFactor;
         this.color = color;
         this.branches = [];
@@ -11,15 +11,18 @@ class Tree {
         angleMode(DEGREES);
         this.#setBranch(this.position, 90, this.branchSize, 0)
     }
-    #setBranch(startPosition, angle, size, count) {
-        if (count > this.branchesLength)
+    #setBranch(startPosition, angle, size, generation) {
+        if (generation > this.maxBranchesGeneration)
             return;
 
         let endPosition = createVector(startPosition.x - cos(angle) * size, startPosition.y - sin(angle) * size)
-        this.branches.push(new Branch(startPosition, endPosition, this.color));
+        this.branches.push(new Branch(startPosition, endPosition, this.color, generation));
 
-        this.#setBranch(endPosition, angle + this.branchAngle, size / this.branchDecrementFactor, count + 1)
-        this.#setBranch(endPosition, angle - this.branchAngle, size / this.branchDecrementFactor, count + 1)
+        let nextbranchStartPosition = endPosition;
+        let nextBranchSize = size/this.branchDecrementFactor;
+        let nextGeneration = generation + 1;
+        this.#setBranch(nextbranchStartPosition, angle + this.branchAngle, nextBranchSize, nextGeneration);
+        this.#setBranch(nextbranchStartPosition, angle - this.branchAngle, nextBranchSize, nextGeneration);
     }
 
     draw() {
@@ -30,15 +33,18 @@ class Tree {
 }
 
 class Branch {
-    constructor(startPosition, endPosition, color) {
+    constructor(startPosition, endPosition, color, generation) {
         this.startPosition = startPosition;
         this.endPosition = endPosition;
         this.color = color;
+        this.generation = generation;
     }
 
     draw() {
         strokeWeight(5);
         stroke(this.color);
-        line(this.startPosition.x, this.startPosition.y, this.endPosition.x, this.endPosition.y);
+        let startPositionXWithWindForce = this.startPosition.x + getWindForce().x * this.generation;
+        let endPositionXWithWindForce = this.endPosition.x + getWindForce().x * (this.generation + 1);
+        line(startPositionXWithWindForce, this.startPosition.y + getWindForce().y * this.generation, endPositionXWithWindForce, this.endPosition.y + getWindForce().y * (this.generation + 1));
     }
 }

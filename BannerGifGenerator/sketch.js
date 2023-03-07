@@ -8,7 +8,7 @@ const starsLength = 500;
 
 const treeBranchAngle = 20;
 const treeBranchSize = 75;
-const treeBranchesLenght = 10;
+const maxBranchesGeneration = 10;
 const treeBranchDecrementFactor = 1.2;
 
 const minStarDiameter = 1;
@@ -17,6 +17,7 @@ const maxStarDiameter = 1.5;
 const title = "Igor B. da Mata..."
 const titleSize = 100;
 const typeBoxCooldown = 0.75;
+let windIntensity;
 
 let typeBoxTimer = 0;
 let mustShowTypeBox = false;
@@ -32,6 +33,12 @@ function getRandomPositionOnScreen() {
   return createVector(random(0, width), random(0, height));
 }
 
+function getWindForce() {
+  let x = map(noise(seconds() / 2), 0, 1, -1, 1) * windIntensity.x;
+  let y = map(noise(seconds() / 2 + 1000), 0, 1, -1, 1) * windIntensity.y;
+  return createVector(x, y);
+}
+
 function setup() {
   createCanvas(1280, 640);
   if (createGif)
@@ -41,14 +48,16 @@ function setup() {
     stars.push(new Star(getRandomPositionOnScreen(), random(minStarDiameter, maxStarDiameter)));
   }
   tree = new Tree(
-    createVector(width - 270, height),
+    createVector(width - 300, height),
     treeBranchAngle,
     treeBranchSize,
-    treeBranchesLenght,
+    maxBranchesGeneration,
     objectColor,
     treeBranchDecrementFactor)
 
   typeBoxTimer = seconds();
+
+  windIntensity =  createVector(1.9, 0.1);
 }
 
 function draw() {
@@ -59,7 +68,7 @@ function draw() {
 
   textSize(titleSize)
   textAlign(CENTER);
-  text(title, width / 2, height / 2 - 200);
+  //text(title, width / 2, height / 2 - 200);
   if (seconds() - typeBoxTimer >= typeBoxCooldown) {
     typeBoxTimer = seconds();
     mustShowTypeBox = !mustShowTypeBox;
