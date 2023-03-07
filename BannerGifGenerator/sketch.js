@@ -14,6 +14,13 @@ const treeBranchDecrementFactor = 1.2;
 const minStarDiameter = 1;
 const maxStarDiameter = 1.5;
 
+const title = "Igor B. da Mata..."
+const titleSize = 100;
+const typeBoxCooldown = 0.75;
+
+let typeBoxTimer = 0;
+let mustShowTypeBox = false;
+
 let stars = [];
 let tree;
 
@@ -33,7 +40,6 @@ function setup() {
   for (let i = 0; i < starsLength; i++) {
     stars.push(new Star(getRandomPositionOnScreen(), random(minStarDiameter, maxStarDiameter)));
   }
-
   tree = new Tree(
     createVector(width - 270, height),
     treeBranchAngle,
@@ -41,6 +47,8 @@ function setup() {
     treeBranchesLenght,
     objectColor,
     treeBranchDecrementFactor)
+
+  typeBoxTimer = seconds();
 }
 
 function draw() {
@@ -48,6 +56,17 @@ function draw() {
   drawBorder();
   drawStars();
   tree.draw();
+
+  textSize(titleSize)
+  textAlign(CENTER);
+  text(title, width / 2, height / 2 - 200);
+  if (seconds() - typeBoxTimer >= typeBoxCooldown) {
+    typeBoxTimer = seconds();
+    mustShowTypeBox = !mustShowTypeBox;
+  }
+  if (mustShowTypeBox) {
+    rect(width / 2 + 393, height / 2 - 200 - titleSize / 1.3, 2, titleSize / 1.3)
+  }
 }
 
 function drawBorder() {
