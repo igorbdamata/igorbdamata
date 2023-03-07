@@ -4,26 +4,49 @@ const backgroundColor = "#101414";
 const borderColor = "#eef9ff";
 const objectColor = "#eef9ff";
 const createGif = false;
-const starsCount = 150;
+const starsLength = 500;
+
+const treeBranchAngle = 20;
+const treeBranchSize = 75;
+const treeBranchesLenght = 10;
+const treeBranchDecrementFactor = 1.2;
+
+const minStarDiameter = 1;
+const maxStarDiameter = 1.5;
 
 let stars = [];
 let tree;
+
+function seconds() {
+  return millis() / 1000;
+}
+
+function getRandomPositionOnScreen() {
+  return createVector(random(0, width), random(0, height));
+}
 
 function setup() {
   createCanvas(1280, 640);
   if (createGif)
     saveGif("banner.gif", gifLength);
 
-  for (let i = 0; i < starsCount; i++) {
-    stars.push(new Star(createVector(random(0, width), random(0, height)), random(0.1, 2)));
+  for (let i = 0; i < starsLength; i++) {
+    stars.push(new Star(this.getRandomPositionOnScreen, random(minStarDiameter, maxStarDiameter)));
   }
-  tree = new Tree(createVector(width-350, height),  20, 100, 10, objectColor,1.2)
+
+  tree = new Tree(
+    createVector(width - 270, height),
+    treeBranchAngle,
+    treeBranchSize,
+    treeBranchesLenght,
+    objectColor,
+    treeBranchDecrementFactor)
 }
 
 function draw() {
   background(backgroundColor);
   drawBorder();
- // drawStars();
+  drawStars();
   tree.draw();
 }
 
@@ -39,11 +62,8 @@ function drawBorder() {
 
 
 function drawStars() {
-  for (let i = 0; i < starsCount; i++) {
+  for (let i = 0; i < starsLength; i++) {
     stars[i].draw();
   }
 }
 
-function seconds() {
-  return millis() / 1000;
-}
