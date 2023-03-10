@@ -18,7 +18,7 @@ const maxStarDiameter = 1.5;
 
 const shootingStarSpeed = 20;
 const shootingStarTrailSize = 10;
-const shootingStarDiameter = 1;
+const shootingStarDiameter = 10;
 
 const title = "Igor B. da Mata..."
 const titleSize = 100;
@@ -29,8 +29,13 @@ let typeBoxTimer = 0;
 let mustShowTypeBox = false;
 
 let stars = [];
-let shootingStar;
+let shootingStars = [];
 let tree;
+
+const minShootingStarSpawnInterval = 3;
+const maxShootingStarSpawnInterval = 10;
+let shootingStarSpawnInterval;
+let lastShootingStarSpawnTime;
 
 function seconds() {
   return millis() / 1000;
@@ -63,19 +68,18 @@ function setup() {
     treeBranchDecrementFactor)
 
   typeBoxTimer = seconds();
-
   windIntensity = createVector(1.9, 0.1);
-  shootingStar = new ShootingStar(shootingStarSpeed, shootingStarTrailSize, shootingStarDiameter);
+  spawnShootingStar();
 }
 
 function draw() {
-  strokeWeight(defaultStroke);
+  noStroke();
   background(backgroundColor);
   drawBorder();
   drawStars();
   tree.draw();
-  shootingStar.update();
-
+  updateShootingStars()
+  checkForSpawnStar();
   textSize(titleSize)
   textAlign(CENTER);
   text(title, width / 2, height / 2 - 200);
@@ -90,7 +94,6 @@ function draw() {
 
 function drawBorder() {
   fill(borderColor)
-  noStroke();
   rect(0, 0, borderSize, height)
 
   rect(0, height - borderSize, width, borderSize)
@@ -104,4 +107,23 @@ function drawStars() {
     stars[i].draw();
   }
 }
+function checkForSpawnStar() {
+  if (seconds() - lastShootingStarSpawnTime >= shootingStarSpawnInterval) {
+    spawnShootingStar();
+  }
+}
+function updateShootingStars() {
+  for (let i = 0; i < shootingStars.length; i++) {
+    shootingStars[i].update();
+    if (shootingStars[i].history[0].y > height) {
+      shootingStars.splice(i, 1);
+    }
+  }
+}
 
+function spawnShootingStar() {
+  let shootingStar = new ShootingStar(shootingStarSpeed, shootingStarTrailSize, shootingStarDiameter);
+  shootingStars.push(shootingStar);
+  shootingStarSpawnInterval = random(minShootingStarSpawnInterval, maxShootingStarSpawnInterval);
+  lastShootingStarSpawnTime = seconds();
+}

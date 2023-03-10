@@ -46,5 +46,6 @@ class Branch {
         let startPositionXWithWindForce = this.startPosition.x + getWindForce().x * this.generation;
         let endPositionXWithWindForce = this.endPosition.x + getWindForce().x * (this.generation + 1);
         line(startPositionXWithWindForce, this.startPosition.y + getWindForce().y * this.generation, endPositionXWithWindForce, this.endPosition.y + getWindForce().y * (this.generation + 1));
+        noStroke();
     }
 }

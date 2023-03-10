@@ -4,10 +4,6 @@ class ShootingStar {
         this.diameter = diameter;
         this.radius = diameter / 2
         this.trailSize = trailSize
-        this.setShootingStar()
-    }
-
-    setShootingStar() {
         this.history = [];
         this.position = createVector(random(100, width - 100), -100);
         this.direction = createVector(random(0.5, 1.1) * (this.position.x < width / 2 ? 1 : -1), 1);
@@ -16,9 +12,9 @@ class ShootingStar {
     update() {
         this.#move();
         this.#updateHistory();
+        fill(255, 255, 255, 255)
         circle(this.position.x, this.position.y, this.diameter);
         this.#drawTrail();
-        strokeWeight(defaultStroke);
     }
 
     #move() {
@@ -34,27 +30,21 @@ class ShootingStar {
     }
     #drawTrail() {
         let angle = this.#getTrailAngle();
-        let leftPoint = this.#getTrailPointFrom(angle+90);
-        let rightPoint = this.#getTrailPointFrom(angle-90);
-        
-        noStroke();
+        let leftPoint = this.#getTrailPointFrom(angle + 90);
+        let rightPoint = this.#getTrailPointFrom(angle - 90);
         beginShape();
         vertex(this.history[0].x, this.history[0].y);
         vertex(leftPoint.x, leftPoint.y);
         vertex(rightPoint.x, rightPoint.y);
         endShape();
     }
-    #getTrailAngle()
-    {
+    #getTrailAngle() {
         let distance = createVector(this.position.x - this.history[0].x, this.position.y - this.history[0].y);
         return atan2(distance.y, distance.x);
     }
-    #getTrailPointFrom(angle)
-    {
-        let circleBorder = this.radius + defaultStroke / 2;
-
-        let x = this.position.x + circleBorder * cos(angle);
-        let y = this.position.y + circleBorder * sin(angle);
+    #getTrailPointFrom(angle) {
+        let x = this.position.x + this.radius * cos(angle);
+        let y = this.position.y + this.radius * sin(angle);
         return createVector(x, y);
     }
 }
