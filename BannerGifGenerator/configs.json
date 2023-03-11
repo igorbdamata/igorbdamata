@@ -1,0 +1,36 @@
+{
+    "general": {
+        "gifLength": 1,
+        "borderSize": 1,
+        "backgroundColor": "#101414",
+        "starsLength": 500,
+        "noiseSeed": 1
+    },
+    "default": {
+        "color": "#eef9ff",
+        "stroke": 10
+    },
+    "star": {
+        "minDiameter": 1,
+        "maxDiameter": 1.5
+    },
+    "tree": {
+        "branchAngle": 20,
+        "branchSize": 75,
+        "maxBranchesGeneration": 10,
+        "branchDecrementFactor": 1.2
+    },
+    "shootingStar": {
+        "speed": 20,
+        "trailSize": 10,
+        "diameter": 10
+    },
+    "shootingStars": {
+        "minSpawnInterval": 3,
+        "maxSpawnInterval": 10
+    },
+    "windIntensity": {
+        "x": 1.9,
+        "y": 0.1
+    }
+}

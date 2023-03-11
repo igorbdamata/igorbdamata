@@ -6,7 +6,6 @@ class Star {
     }
 
     draw() {
-        fill(objectColor)
         circle(this.position.x, this.position.y, this.diameter + this.#getBrightness());
     }
     #getBrightness() {

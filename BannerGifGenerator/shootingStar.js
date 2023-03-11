@@ -12,7 +12,6 @@ class ShootingStar {
     update() {
         this.#move();
         this.#updateHistory();
-        fill(255, 255, 255, 255)
         circle(this.position.x, this.position.y, this.diameter);
         this.#drawTrail();
     }
