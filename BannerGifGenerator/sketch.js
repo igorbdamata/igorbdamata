@@ -19,9 +19,13 @@ let tree;
 let shootingStarSpawnInterval;
 let lastShootingStarSpawnTime;
 
+let perlinNoise;
+let windNoise;
+let framesPercent;
+
 function keyTyped() {
   if (key == "r") {
-    saveGif("banner.gif", gifLength);
+    saveGif("banner.gif", config.general.gifLength, {delay:0, units:"frames"});
   }
 }
 
@@ -34,8 +38,8 @@ function setup() {
   createCanvas(1280, 640);
   angleMode(DEGREES);
   textFont(font);
-  noiseSeed(config.general.noiseSeed);
-
+  perlinNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed,0);
+  windNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed,5000);
   for (let i = 0; i < config.general.starsLength; i++) {
     stars.push(new Star(getRandomPositionOnScreen(), random(config.star.minDiameter, config.star.maxDiameter)));
   }
@@ -46,7 +50,7 @@ function setup() {
     config.tree.maxBranchesGeneration,
     config.default.color,
     config.tree.branchDecrementFactor)
-
+  
   typeBoxTimer = seconds();
   windIntensity = createVector(config.windIntensity.x, config.windIntensity.y);
   spawnShootingStar();
@@ -56,6 +60,7 @@ function draw() {
   noStroke();
   background(config.general.backgroundColor);
   fill(config.default.color)
+  framesPercent = (frameCount % config.general.gifLength)/ config.general.gifLength;
 
   drawBorder();
   drawStars();

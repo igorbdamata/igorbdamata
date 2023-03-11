@@ -1,6 +1,6 @@
 {
     "general": {
-        "gifLength": 1,
+        "gifLength": 600,
         "borderSize": 1,
         "backgroundColor": "#101414",
         "starsLength": 500,
@@ -30,7 +30,7 @@
         "maxSpawnInterval": 10
     },
     "windIntensity": {
-        "x": 1.9,
+        "x": 3,
         "y": 0.1
     }
 }

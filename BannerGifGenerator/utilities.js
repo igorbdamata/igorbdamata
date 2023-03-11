@@ -7,7 +7,7 @@ function getRandomPositionOnScreen() {
 }
 
 function getWindForce() {
-    let x = map(noise(seconds() / 3), 0, 1, -1, 1) * windIntensity.x;
-    let y = map(noise(seconds() / 3 + 1000), 0, 1, -1, 1) * windIntensity.y;
+    let x = map(windNoise.getValue(), 0, 1, -1, 1) * windIntensity.x;
+    let y = map(windNoise.getValue(), 0, 1, -1, 1) * windIntensity.y;
     return createVector(x, y);
 }
