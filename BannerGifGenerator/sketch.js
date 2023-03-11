@@ -21,11 +21,13 @@ let lastShootingStarSpawnTime;
 
 let perlinNoise;
 let windNoise;
+
 let framesPercent;
+let isRecording = false;
 
 function keyTyped() {
   if (key == "r") {
-    saveGif("banner.gif", config.general.gifLength, {delay:0, units:"frames"});
+    saveGif("banner.gif", config.general.gifLength, { delay: 0, units: "frames" });
   }
 }
 
@@ -38,8 +40,8 @@ function setup() {
   createCanvas(1280, 640);
   angleMode(DEGREES);
   textFont(font);
-  perlinNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed,0);
-  windNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed,5000);
+  perlinNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed, 0);
+  windNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed, 5000);
   for (let i = 0; i < config.general.starsLength; i++) {
     stars.push(new Star(getRandomPositionOnScreen(), random(config.star.minDiameter, config.star.maxDiameter)));
   }
@@ -50,17 +52,18 @@ function setup() {
     config.tree.maxBranchesGeneration,
     config.default.color,
     config.tree.branchDecrementFactor)
-  
+
   typeBoxTimer = seconds();
   windIntensity = createVector(config.windIntensity.x, config.windIntensity.y);
-  spawnShootingStar();
+
+  setShootingStarSpawnValues();
 }
 
 function draw() {
   noStroke();
   background(config.general.backgroundColor);
   fill(config.default.color)
-  framesPercent = (frameCount % config.general.gifLength)/ config.general.gifLength;
+  framesPercent = (frameCount % config.general.gifLength) / config.general.gifLength;
 
   drawBorder();
   drawStars();
@@ -96,13 +99,18 @@ function updateShootingStars() {
 }
 
 function checkForSpawnStar() {
-  if (seconds() - lastShootingStarSpawnTime >= shootingStarSpawnInterval) {
+  let isTimeToSpawn = seconds() - lastShootingStarSpawnTime >= shootingStarSpawnInterval
+  if (isTimeToSpawn && framesPercent < 0.85) {
     spawnShootingStar();
   }
 }
 function spawnShootingStar() {
   let s = new ShootingStar(config.shootingStar.speed, config.shootingStar.trailSize, config.shootingStar.diameter);
   shootingStars.push(s);
+  setShootingStarSpawnValues();
+}
+function setShootingStarSpawnValues()
+{
   shootingStarSpawnInterval = random(config.shootingStars.minSpawnInterval, config.shootingStars.maxSpawnInterval);
   lastShootingStarSpawnTime = seconds();
 }
@@ -125,9 +133,8 @@ function updateTypeBox() {
     mustShowTypeBox = !mustShowTypeBox;
   }
 
-  if(mustShowTypeBox)
-  {
+  if (mustShowTypeBox) {
     let adjustLevel = 20;
-    text(" ".repeat(SUB_TITLE.length+adjustLevel)+"|", width/2, height/2-125)
+    text(" ".repeat(SUB_TITLE.length + adjustLevel) + "|", width / 2, height / 2 - 125)
   }
 }
