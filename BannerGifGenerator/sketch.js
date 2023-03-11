@@ -1,8 +1,11 @@
-const TITLE = "Igor B. da Mata..."
+const TITLE = "Igor B. da Mata"
 const TITLE_SIZE = 100;
+const SUB_TITLE = "Game Programmer..."
+const SUB_TITLE_SIZE = 58;
 const TYPE_BOX_COOLDOWN = 0.75;
 
 let config;
+let font;
 
 let windIntensity;
 
@@ -24,11 +27,13 @@ function keyTyped() {
 
 function preload() {
   config = loadJSON("configs.json");
+  font = loadFont("Oxygen-Regular.ttf");
 }
 
 function setup() {
   createCanvas(1280, 640);
-
+  angleMode(DEGREES);
+  textFont(font);
   noiseSeed(config.general.noiseSeed);
 
   for (let i = 0; i < config.general.starsLength; i++) {
@@ -58,6 +63,8 @@ function draw() {
   updateShootingStars()
   checkForSpawnStar();
   drawTitle();
+  drawSubTitle();
+  updateTypeBox();
 }
 
 function drawBorder() {
@@ -95,16 +102,27 @@ function spawnShootingStar() {
   lastShootingStarSpawnTime = seconds();
 }
 
-function drawTitle()
-{
+function drawTitle() {
   textSize(TITLE_SIZE)
   textAlign(CENTER);
   text(TITLE, width / 2, height / 2 - 200);
+}
+
+function drawSubTitle() {
+  textSize(SUB_TITLE_SIZE)
+  textAlign(CENTER);
+  text(SUB_TITLE, width / 2, height / 2 - 125);
+}
+
+function updateTypeBox() {
   if (seconds() - typeBoxTimer >= TYPE_BOX_COOLDOWN) {
     typeBoxTimer = seconds();
     mustShowTypeBox = !mustShowTypeBox;
   }
-  if (mustShowTypeBox) {
-    rect(width / 2 + 393, height / 2 - 200 - TITLE_SIZE / 1.3, 2, TITLE_SIZE / 1.3)
+
+  if(mustShowTypeBox)
+  {
+    let adjustLevel = 20;
+    text(" ".repeat(SUB_TITLE.length+adjustLevel)+"|", width/2, height/2-125)
   }
 }

@@ -8,7 +8,6 @@ class Tree {
         this.color = color;
         this.branches = [];
 
-        angleMode(DEGREES);
         this.#setBranch(this.position, 90, this.branchSize, 0)
     }
     #setBranch(startPosition, angle, size, generation) {
