@@ -55,6 +55,7 @@
 </a>
 
 <br>
+<br>
 
 <h4 align="left">Kingdom Domination</h4>
 <a href="https://ludos-aurum.itch.io/kingdom-domination" target="_blank" rel="noreferrer">
@@ -63,12 +64,15 @@
 </a>
 
 <br>
+<br>
 
 <h4 align="left">Beetle Infestation</h4>
 <a href="https://ludos-aurum.itch.io/beetle-infestation" target="_blank" rel="noreferrer">
     <img align="middle" src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/BeetleInfestation.png"
         alt="" width="420" height="420">
 </a>
+
+<br>
 <br>
 
 <h4 align="left">Prompt Mine Field</h4>
@@ -83,9 +87,7 @@
 
 <h3>My Github status:</h3>
 
-<p><img align="center"
+<p><img align="left"
         src="https://github-readme-stats.vercel.app/api/top-langs?username=igorbdamata&show_icons=true&locale=en&layout=compact"
-        alt="igorbdamata" /></p>
-<br>
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=igorbdamata&" alt="igorbdamata" />
+        alt="igorbdamata" /><img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=igorbdamata&" alt="igorbdamata" />
 </p>
