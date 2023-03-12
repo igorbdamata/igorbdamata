@@ -4,17 +4,18 @@
 <h3 align="center">A passionate game programmer</h3>
 
 
-<h2 align="left">About me<h2>
+<h3 align="left">About me</h3>
 * 🌱 Learning: **C++**
-* 👨‍💻 General skills:
+* 👨‍💻 General skills:<ul>
 <li>-Object oriented programming;</li>
 <li>-Code refactoring;</li>
 <li>-Game development;</li>
+</ul>
 
 <br>
 <br>
 
-<h2 align="left">Connect with me:<h2>
+<h3 align="left">Connect with me:</h3>
 <p align="left">
     <a href="discordapp.com/users/Igor#9584" target="blank"><img align="center"
             src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"
@@ -27,7 +28,7 @@
 <br>
 <br>
 
-<h2 align="left">Languages and Tools:<h2>
+<h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank" rel="noreferrer"> <img
             src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"
             alt="C#" />
@@ -43,9 +44,9 @@
 </p>
 <br>
 
-<h2 align="left">My main works:<h2>
+<h3 align="left">My main works:</h3>
 
-<h3 align="left">Control Headlights!</h3> 
+<h4 align="left">Control Headlights!</h4> 
 <a href="https://store.steampowered.com/app/1799060/Control_Headlights/" target="_blank" rel="noreferrer">
     <img align="middle" src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/ControlHeadlights.png"
         alt="" width="420" height="420">
@@ -80,7 +81,7 @@
 <br>
 <br>
 
-<h2>My Github status:<h2>
+<h3>My Github status:</h3>
 
 <p><img align="center"
         src="https://github-readme-stats.vercel.app/api/top-langs?username=igorbdamata&show_icons=true&locale=en&layout=compact"
