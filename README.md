@@ -15,7 +15,6 @@
 </ul>
 
 <br>
-<br>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -28,7 +27,6 @@
             src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="#9584" /></a>  igorbdamata@gmail.com
 </p>
 
-<br>
 <br>
 
 <h3 align="left">Languages and Tools:</h3>
@@ -57,7 +55,6 @@
 </a>
 
 <br>
-<br>
 
 <h4 align="left">Kingdom Domination</h4>
 <a href="https://ludos-aurum.itch.io/kingdom-domination" target="_blank" rel="noreferrer">
@@ -66,14 +63,12 @@
 </a>
 
 <br>
-<br>
 
 <h4 align="left">Beetle Infestation</h4>
 <a href="https://ludos-aurum.itch.io/beetle-infestation" target="_blank" rel="noreferrer">
     <img align="middle" src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/BeetleInfestation.png"
         alt="" width="420" height="420">
 </a>
-<br>
 <br>
 
 <h4 align="left">Prompt Mine Field</h4>
@@ -94,5 +89,3 @@
 <br>
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=igorbdamata&" alt="igorbdamata" />
 </p>
-
-<br>
