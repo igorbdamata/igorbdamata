@@ -92,5 +92,5 @@
         alt="igorbdamata" /></p>
 <br>
 <p>
-<img align="right" src="https://github-readme-streak-stats.herokuapp.com/?user=igorbdamata&" alt="igorbdamata" width= "470" height= "185"/>
+<img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=igorbdamata&" alt="igorbdamata" width= "470" height= "185"/>
 </p>
