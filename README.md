@@ -6,7 +6,7 @@
 
 <h3 align="left">About me</h3>
 <ul>
-<li> 🌱 Learning: **C++**</li>
+<li> 🌱 Learning: C++</li>
 <li> 👨‍💻 General skills:</li><ul>
 <li> Object oriented programming;</li>
 <li> Code refactoring;</li>
@@ -21,11 +21,11 @@
 <p align="left">
     <a href="discordapp.com/users/Igor#9584" target="blank"><img align="center"
             src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"
-            alt="#9584"/></a>: Igor#9584
+            alt="#9584"/></a>  Igor#9584
     <br>
     <br>
     <a href="https://mail.google.com/" target="blank"><img align="center"
-            src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="#9584" /></a>: igorbdamata@gmail.com
+            src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="#9584" /></a>  igorbdamata@gmail.com
 </p>
 
 <br>
@@ -81,6 +81,8 @@
     <img align="middle" src="https://raw.githubusercontent.com/igorbdamata/igorbdamata/main/PromptMineFieldLogo.jpg"
         alt="" width="420" height="420">
 </a>
+
+<br>
 <br>
 <br>
 
