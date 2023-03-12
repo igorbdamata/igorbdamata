@@ -1,5 +1,5 @@
 class Tree {
-    constructor(position, branchAngle, branchSize, branchesLength, color, branchDecrementFactor) {
+    constructor(position, branchAngle, branchSize, branchesLength, branchDecrementFactor, color) {
         this.position = position;
         this.branchAngle = branchAngle;
         this.branchSize = branchSize;
@@ -15,10 +15,10 @@ class Tree {
             return;
 
         let endPosition = createVector(startPosition.x - cos(angle) * size, startPosition.y - sin(angle) * size)
-        this.branches.push(new Branch(startPosition, endPosition, this.color, generation));
+        this.branches.push(new Branch(startPosition, endPosition, generation, this.color));
 
         let nextbranchStartPosition = endPosition;
-        let nextBranchSize = size/this.branchDecrementFactor;
+        let nextBranchSize = size / this.branchDecrementFactor;
         let nextGeneration = generation + 1;
         this.#setBranch(nextbranchStartPosition, angle + this.branchAngle, nextBranchSize, nextGeneration);
         this.#setBranch(nextbranchStartPosition, angle - this.branchAngle, nextBranchSize, nextGeneration);
@@ -32,7 +32,7 @@ class Tree {
 }
 
 class Branch {
-    constructor(startPosition, endPosition, color, generation) {
+    constructor(startPosition, endPosition, generation, color) {
         this.startPosition = startPosition;
         this.endPosition = endPosition;
         this.color = color;

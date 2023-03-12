@@ -45,13 +45,7 @@ function setup() {
   for (let i = 0; i < config.general.starsLength; i++) {
     stars.push(new Star(getRandomPositionOnScreen(), random(config.star.minDiameter, config.star.maxDiameter)));
   }
-  tree = new Tree(
-    createVector(width - 300, height),
-    config.tree.branchAngle,
-    config.tree.branchSize,
-    config.tree.maxBranchesGeneration,
-    config.default.color,
-    config.tree.branchDecrementFactor)
+  spawnTreeAt(createVector(width - 300, height));
 
   typeBoxTimer = seconds();
   windIntensity = createVector(config.windIntensity.x, config.windIntensity.y);
@@ -103,16 +97,6 @@ function checkForSpawnStar() {
   if (isTimeToSpawn && framesPercent < 0.85) {
     spawnShootingStar();
   }
-}
-function spawnShootingStar() {
-  let s = new ShootingStar(config.shootingStar.speed, config.shootingStar.trailSize, config.shootingStar.diameter);
-  shootingStars.push(s);
-  setShootingStarSpawnValues();
-}
-function setShootingStarSpawnValues()
-{
-  shootingStarSpawnInterval = random(config.shootingStars.minSpawnInterval, config.shootingStars.maxSpawnInterval);
-  lastShootingStarSpawnTime = seconds();
 }
 
 function drawTitle() {
