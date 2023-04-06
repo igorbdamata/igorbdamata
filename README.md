@@ -88,7 +88,7 @@
 <h3>My Github status:</h3>
 
 <p><img align="left"
-        src="https://github-readme-stats.vercel.app/api/top-langs?username=igorbdamata&show_icons=true&locale=en&layout=compact"
+        src="https://github-readme-stats.vercel.app/api/top-langs?username=igorbdamata&show_icons=true&locale=en&layout=compact&hide=shader,hlsl,cginc"
         alt="igorbdamata" /></p>
 <br>
 <p>
