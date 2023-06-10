@@ -18,9 +18,9 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-    <a href="https://discordapp.com/users/Igor#9584" target="blank"><img align="center"
+    <a href="https://discord.com/channels/@me" target="blank"><img align="center"
             src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"
-            alt="#9584"/></a>  Igor#9584
+            alt="#9584"/></a>  igorbdamata
     <br>
     <br>
     <a href="https://mail.google.com/" target="blank"><img align="center"
