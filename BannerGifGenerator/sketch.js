@@ -42,6 +42,7 @@ function setup() {
   textFont(font);
   perlinNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed, 0);
   windNoise = new PerlinNoiseLoop(0.5, config.general.noiseSeed, 5000);
+  
   for (let i = 0; i < config.general.starsLength; i++) {
     stars.push(new Star(getRandomPositionOnScreen(), random(config.star.minDiameter, config.star.maxDiameter)));
   }
